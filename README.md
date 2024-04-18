@@ -19,4 +19,14 @@ You must install the extension and then go to your device detail. There you will
 
 Within the telemetry data obtained from the page, the id of cell H3 where the antenna is located is encoded. This does not give us an exact result, but it allows us to know approximately where it is located.
 
+## Installation
+
+Download or clone this project and then follow the steps below:
+
+1. Unzip the project
+2. Go to `chrome://extensions/` and enable the developer mode.
+![docs/install-step2.png](docs/install-step2.png)
+3. Click on "Load unpacked" and select the 'out' folder where the project was unzipped
+4. ![docs/install-step3.png](docs/install-step3.png)
+
 
