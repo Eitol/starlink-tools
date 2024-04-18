@@ -1,0 +1,37 @@
+{
+  "manifest_version": 3,
+  "name": "STARLINK-TOOLS",
+  "short_name": "S-T-L-T",
+  "version": "0.0.1",
+  "description": "Starlink Tools",
+  "icons": {
+    "16": "/icons/icon16.png",
+    "32": "/icons/icon32.png",
+    "48": "/icons/icon48.png",
+    "192": "/icons/icon192.png"
+  },
+  "permissions": [
+    "cookies",
+    "activeTab",
+    "background",
+    "scripting"
+  ],
+  "minimum_chrome_version": "92",
+  "web_accessible_resources": [
+    {
+      "resources": ["index.html"],
+      "matches": ["https://*.starlink.com/*"]
+    }
+  ],
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["inject.js"]
+    }
+  ],
+  "host_permissions": ["https://*.starlink.com/*"],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  }
+}
